@@ -1,15 +1,7 @@
-gcloud storage cp -r gs://qwiklabs-gcp-03-789e946ed1a3-bucket/adk_eval_challenge_lab .
-
-gcloud config set project qwiklabs-gcp-03-789e946ed1a3
-
-export PATH=$PATH:"/home/${USER}/.local/bin"
-
-cd ~/adk_eval_challenge_lab
-
-uv init
-
-uv add -r requirements.txt
-
-source .venv/bin/activate
-
-terraform init
+,
+{
+  "rubric_id": "valid_transitions",
+  "rubric_content": {
+    "text_property": "Valid transitions include: From pool_estimates to accepted_with_deposit or denied_estimate, and from accepted_with_deposit to paid_and_close instead of completed_audit."
+  }
+}
