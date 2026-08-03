@@ -1,1 +1,1 @@
-https://www.udemy.com/course/selenium-with-python/
+C:\Users\TEPRATAP\AppData\Local\Programs\Python\Python310\python.exe -m pip install robotframework-seleniumlibrary
