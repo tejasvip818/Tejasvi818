@@ -1,29 +1,16 @@
-Having 4+ years of experience in Software Testing.
-Hands-on experience in Selenium Automation Testing using Python.
-Experience in Automation Test Script Development, Execution, and Maintenance.
-Experience in SIT, UAT, Regression, Smoke, and Functional Testing.
-Experience in developing and maintaining automation test scripts.
-Good understanding of Page Object Model (POM) and Data-Driven Framework.
-Basic knowledge of CI/CD using Jenkins/Azure DevOps.
-Hands-on experience with JIRA and Agile methodology.
-Basic knowledge of Robot Framework.
-Good knowledge of SQL and Software Testing concepts.
-Skills Profile
-Category
-Skills
-Automation
-Selenium WebDriver, Python, Robot Framework (Basic)
-Testing
-Automation Testing, Manual Testing, SIT, UAT, Regression, Smoke, Functional
-Framework
-Page Object Model (POM), Data-Driven Framework
-CI/CD
-Jenkins, Azure DevOps (Basic)
-Version Control
-Git
-Test Management
-JIRA
-Database
-SQL
-Operating System
-Windows, Linux
+Developed and maintained automation test scripts using Python, Selenium WebDriver, and Pytest.
+Designed and executed automation test cases for Functional, Regression, Smoke, SIT, and UAT testing.
+Automated end-to-end business scenarios for web, desktop, mobile, and enterprise applications.
+Followed Page Object Model (POM) and reusable framework components to improve script maintainability.
+Created automation test scripts from scratch based on business requirements.
+Performed test execution, analyzed failures, and reported defects using JIRA.
+Validated application functionality across different environments and platforms.
+Worked with Git for source code management and version control.
+Executed automation test suites through Jenkins CI/CD pipelines.
+Generated and analyzed Allure Reports for automation execution results.
+Performed API validation and database verification using SQL wherever required.
+Collaborated with developers, business analysts, and QA team members in an Agile/Scrum environment.
+Participated in requirement analysis, sprint planning, defect triage, and daily stand-up meetings.
+Maintained automation scripts by updating locators, test data, and reusable utilities whenever application changes occurred.
+Ensured high test coverage and improved regression testing efficiency through automation.
+Ye format professional hai aur Automation Testing resume me commonly use hota hai.
