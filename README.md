@@ -1,16 +1,22 @@
-Developed and maintained automation test scripts using Python, Selenium WebDriver, and Pytest.
-Designed and executed automation test cases for Functional, Regression, Smoke, SIT, and UAT testing.
-Automated end-to-end business scenarios for web, desktop, mobile, and enterprise applications.
-Followed Page Object Model (POM) and reusable framework components to improve script maintainability.
-Created automation test scripts from scratch based on business requirements.
-Performed test execution, analyzed failures, and reported defects using JIRA.
-Validated application functionality across different environments and platforms.
-Worked with Git for source code management and version control.
-Executed automation test suites through Jenkins CI/CD pipelines.
-Generated and analyzed Allure Reports for automation execution results.
-Performed API validation and database verification using SQL wherever required.
-Collaborated with developers, business analysts, and QA team members in an Agile/Scrum environment.
-Participated in requirement analysis, sprint planning, defect triage, and daily stand-up meetings.
-Maintained automation scripts by updating locators, test data, and reusable utilities whenever application changes occurred.
-Ensured high test coverage and improved regression testing efficiency through automation.
-Ye format professional hai aur Automation Testing resume me commonly use hota hai.
+import re
+from playwright.sync_api import Page, expect
+
+def test_verify_pwlocators(page: Page):
+
+    page.goto("https://demo.nopcommerce.com/")
+    page.wait_for_timeout(5000)
+
+    # 1) get_by_alt_text()
+    logo = page.get_by_alt_text("nopCommerce demo store")
+    expect(logo).to_be_visible()
+
+    # 2) get_by_text()
+    expect(page.get_by_text("Welcome to our store")).to_be_visible()
+    expect(page.get_by_text("Welcome to")).to_be_visible()
+    expect(page.get_by_text(re.compile(".*Welcome.*"))).to_be_visible()
+
+    # 3) get_by_role()
+    page.goto("https://demo.nopcommerce.com/register?returnUrl=%2F")
+    expect(
+        page.get_by_role("heading", name="Register")
+    ).to_be_visible()
