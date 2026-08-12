@@ -1,1 +1,3 @@
-java -XshowSettings:properties -version 2>&1 | Select-String "
+(myvenv) PS C:\Users\...\Desktop\PySpark>
+
+ Get-Item (Get-Command java).Source | Format-List *
