@@ -1,19 +1,20 @@
-USERNAME = "Tejas"
+from playwright.sync_api import Page
 
-EMAIL = "tejas12345@example.com"
 
-PASSWORD = "Test@123"
+class SignupPage:
 
-FIRST_NAME = "Tejas"
+    def __init__(self, page: Page):
+        self.page = page
 
-LAST_NAME = "Pratap"
+        self.signup_login = page.get_by_text("Signup / Login")
+        self.name = page.locator('input[data-qa="signup-name"]')
+        self.email = page.locator('input[data-qa="signup-email"]')
+        self.signup_button = page.get_by_role("button", name="Signup")
 
-ADDRESS = "Bangalore"
+    def open_signup(self):
+        self.signup_login.click()
 
-STATE = "Karnataka"
-
-CITY = "Bangalore"
-
-ZIPCODE = "560001"
-
-MOBILE = "9876543210"
+    def enter_signup_details(self, name, email):
+        self.name.fill(name)
+        self.email.fill(email)
+        self.signup_button.click()
