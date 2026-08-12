@@ -1,20 +1,16 @@
-from playwright.sync_api import Page
+from pages.signup_page import SignupPage
+from testdata.user_data import USERNAME, EMAIL
 
 
-class SignupPage:
+def test_register_user(page):
 
-    def __init__(self, page: Page):
-        self.page = page
+    page.goto("https://www.automationexercise.com/")
 
-        self.signup_login = page.get_by_text("Signup / Login")
-        self.name = page.locator('input[data-qa="signup-name"]')
-        self.email = page.locator('input[data-qa="signup-email"]')
-        self.signup_button = page.get_by_role("button", name="Signup")
+    signup_page = SignupPage(page)
 
-    def open_signup(self):
-        self.signup_login.click()
+    signup_page.open_signup()
 
-    def enter_signup_details(self, name, email):
-        self.name.fill(name)
-        self.email.fill(email)
-        self.signup_button.click()
+    signup_page.enter_signup_details(
+        USERNAME,
+        EMAIL
+    )
