@@ -1,5 +1,13 @@
-Hi Sital,
-I had already given an interview and discussed the opportunity with Sukesh around a week ago, but I haven't received any confirmation yet.
-I have 4 years of experience in software testing and have worked on Python and Selenium Automation Testing. I also have knowledge of Robot Framework, POM, XPath, CI/CD, Azure DevOps and Git, along with experience in automation script development, execution, debugging and maintenance.
-I don't have any planned long leave until December, and I am available to take up the opportunity.
-Please consider me for this role. I am confident that I can handle the automation work and quickly adapt to the project requirements.
+import pytest
+from playwright.sync_api import sync_playwright
+
+
+@pytest.fixture
+def page():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+        page = browser.new_page()
+
+        yield page
+
+        browser.close()
