@@ -1,2 +1,3 @@
-$env:PYSPARK_PYTHON="$env:VIRTUAL_ENV\Scripts\python.exe"
-$env:PYSPARK_DRIVER_PYTHON="$env:VIRTUAL_ENV\Scripts\python.exe"
+JAVA_HOME=C:\Program Files\Java\jdk-19
+PYSPARK_PYTHON=${VIRTUAL_ENV}\Scripts\python.exe
+PYSPARK_DRIVER_PYTHON=${VIRTUAL_ENV}\Scripts\python.exe
