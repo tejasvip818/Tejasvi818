@@ -1,13 +1,19 @@
-import pytest
-from playwright.sync_api import sync_playwright
+USERNAME = "Tejas"
 
+EMAIL = "tejas12345@example.com"
 
-@pytest.fixture
-def page():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        page = browser.new_page()
+PASSWORD = "Test@123"
 
-        yield page
+FIRST_NAME = "Tejas"
 
-        browser.close()
+LAST_NAME = "Pratap"
+
+ADDRESS = "Bangalore"
+
+STATE = "Karnataka"
+
+CITY = "Bangalore"
+
+ZIPCODE = "560001"
+
+MOBILE = "9876543210"
