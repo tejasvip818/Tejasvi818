@@ -1,2 +1,10 @@
-    def click_continue(self):
-        self.page.get_by_text("Continue").click()
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("MyFirstPySpark") \
+    .master("local[*]") \
+    .getOrCreate()
+
+print("PySpark Started Successfully")
+
+spark.stop()
