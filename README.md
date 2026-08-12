@@ -1,1 +1,3 @@
-java -XshowSettings:properties -version 2>&1 | findstr "java.home"
+$env:JAVA_HOME="C:\Program Files\Java\jdk-19"
+$env:JAVA_HOME
+C:\Program Files\Java\jdk-19
