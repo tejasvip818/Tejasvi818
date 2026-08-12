@@ -1,9 +1,7 @@
 
-$env:PYSPARK_PYTHON="$PWD\myvenv\Scripts\python.exe"
-$env:PYSPARK_DRIVER_PYTHON="$PWD\myvenv\Scripts\python.exe"
-& "$PWD\myvenv\Scripts\python.exe" --version
-python first_pyspark.py
+import os
+import sys
 
-$env:PYSPARK_PYTHON="$PWD\myvenv\Scripts\python.exe"
-$env:PYSPARK_DRIVER_PYTHON="$PWD\myvenv\Scripts\python.exe"
-& "$PWD\myvenv\Scripts\python.exe" --version
+os.environ["JAVA_HOME"] = r"C:\Program Files\Java\jdk-19"
+os.environ["PYSPARK_PYTHON"] = sys.executable
+os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
