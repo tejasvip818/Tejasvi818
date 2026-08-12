@@ -1,30 +1,38 @@
-    def enter_account_information(self, password, first_name, last_name,
-                                  address, state, city, zipcode, mobile):
+from pages.signup_page import SignupPage
+from testdata.user_data import (
+    USERNAME,
+    EMAIL,
+    PASSWORD,
+    FIRST_NAME,
+    LAST_NAME,
+    ADDRESS,
+    STATE,
+    CITY,
+    ZIPCODE,
+    MOBILE
+)
 
-        self.page.locator("#id_gender1").check()
 
-        self.page.locator("#password").fill(password)
+def test_register_user(page):
 
-        self.page.locator("#days").select_option("1")
-        self.page.locator("#months").select_option("1")
-        self.page.locator("#years").select_option("2000")
+    page.goto("https://www.automationexercise.com/")
 
-        self.page.locator("#newsletter").check()
-        self.page.locator("#optin").check()
+    signup_page = SignupPage(page)
 
-        self.page.locator("#first_name").fill(first_name)
-        self.page.locator("#last_name").fill(last_name)
+    signup_page.open_signup()
 
-        self.page.locator("#address1").fill(address)
+    signup_page.enter_signup_details(
+        USERNAME,
+        EMAIL
+    )
 
-        self.page.locator("#country").select_option(label="India")
-
-        self.page.locator("#state").fill(state)
-        self.page.locator("#city").fill(city)
-        self.page.locator("#zipcode").fill(zipcode)
-        self.page.locator("#mobile_number").fill(mobile)
-
-        self.page.get_by_role(
-            "button",
-            name="Create Account"
-        ).click()
+    signup_page.enter_account_information(
+        PASSWORD,
+        FIRST_NAME,
+        LAST_NAME,
+        ADDRESS,
+        STATE,
+        CITY,
+        ZIPCODE,
+        MOBILE
+    )
