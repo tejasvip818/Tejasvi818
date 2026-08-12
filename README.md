@@ -36,3 +36,4 @@ def test_register_user(page):
         ZIPCODE,
         MOBILE
     )
+assert page.get_by_text("ACCOUNT CREATED!").is_visible()
