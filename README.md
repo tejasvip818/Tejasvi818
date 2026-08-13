@@ -1,4 +1,1 @@
-*** Test Cases ***
-Register New User
-    New Browser    chromium    headless=False
-    New Page    https://www.automationexercise.com/
+.\.venv\Scripts\robot.exe tests\register_user.robot
