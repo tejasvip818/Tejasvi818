@@ -1,29 +1,40 @@
-*** Variables ***
+*** Settings ***
+Library    SeleniumLibrary
+Resource   locators.robot
 
-# Home / Login
-${SIGNUP_LOGIN}          xpath=//a[contains(text(),'Signup / Login')]
 
-# Signup
-${SIGNUP_NAME}            xpath=//input[@data-qa='signup-name']
-${SIGNUP_EMAIL}           xpath=//input[@data-qa='signup-email']
-${SIGNUP_BUTTON}          xpath=//button[@data-qa='signup-button']
+*** Keywords ***
 
-# Account Information
-${GENDER_MALE}            xpath=//input[@id='id_gender1']
-${PASSWORD}               xpath=//input[@id='password']
-${DAY}                    xpath=//select[@id='days']
-${MONTH}                  xpath=//select[@id='months']
-${YEAR}                   xpath=//select[@id='years']
+Open Automation Exercise
+    Open Browser    https://automationexercise.com/    Chrome
+    Maximize Browser Window
 
-# Address Information
-${FIRST_NAME}             xpath=//input[@id='first_name']
-${LAST_NAME}              xpath=//input[@id='last_name']
-${ADDRESS}                xpath=//input[@id='address1']
-${COUNTRY}                xpath=//select[@id='country']
-${STATE}                  xpath=//input[@id='state']
-${CITY}                   xpath=//input[@id='city']
-${ZIPCODE}                xpath=//input[@id='zipcode']
-${MOBILE_NUMBER}          xpath=//input[@id='mobile_number']
+Click Signup Login
+    Click Element    ${SIGNUP_LOGIN}
 
-# Create Account
-${CREATE_ACCOUNT}         xpath=//button[@data-qa='create-account']
+Enter Signup Details
+    [Arguments]    ${name}    ${email}
+    Input Text    ${SIGNUP_NAME}    ${name}
+    Input Text    ${SIGNUP_EMAIL}    ${email}
+    Click Element    ${SIGNUP_BUTTON}
+
+Enter Account Information
+    [Arguments]    ${password}
+    Click Element    ${GENDER_MALE}
+    Input Text    ${PASSWORD}    ${password}
+    Select From List By Value    ${DAY}    10
+    Select From List By Label    ${MONTH}    May
+    Select From List By Value    ${YEAR}    1995
+
+Enter Address Information
+    Input Text    ${FIRST_NAME}       Tejasvi
+    Input Text    ${LAST_NAME}        Pratap
+    Input Text    ${ADDRESS}          Bangalore
+    Select From List By Label    ${COUNTRY}    India
+    Input Text    ${STATE}            Karnataka
+    Input Text    ${CITY}             Bangalore
+    Input Text    ${ZIPCODE}          560001
+    Input Text    ${MOBILE_NUMBER}    9876543210
+
+Create Account
+    Click Element    ${CREATE_ACCOUNT}
