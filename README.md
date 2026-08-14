@@ -6,7 +6,6 @@ Test Teardown    Close All Browsers
 
 
 *** Test Cases ***
-
 Registration With Valid Details
     Click Signup Login
 
