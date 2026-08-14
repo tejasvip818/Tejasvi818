@@ -1,1 +1,1 @@
-robot tests/registration.robot
+robot -d results tests/registration.robot
