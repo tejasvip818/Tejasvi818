@@ -1,25 +1,5 @@
-*** Settings ***
-Resource    ../resources/keywords.robot
+${PASSWORD_FIELD}    xpath=//input[@id='password']
 
-Test Setup       Open Automation Exercise
-Test Teardown    Close All Browsers
+resources/keywords.robot
 
-
-*** Test Cases ***
-Registration With Valid Details
-    Click Signup Login
-
-    Enter Signup Details
-    ...    Tejasvi
-    ...    tejasvi987654321@gmail.com
-
-    Page Should Contain    Enter Account Information
-
-    Enter Account Information
-    ...    Test@12345
-
-    Enter Address Information
-
-    Create Account
-
-    Page Should Contain    ACCOUNT CREATED!
+Input Text    ${PASSWORD_FIELD}    ${password}
