@@ -1,27 +1,17 @@
-*** Settings ***
-Library     SeleniumLibrary
-Resource    ../Resource/loginkeywords.robot
+Enter Login Email
+    [Arguments]    ${email}
+    Input Text    ${txt_loginEmail}    ${email}
 
-*** Variables ***
-${Browser}    chrome
-${SiteUrl}    https://www.automationexercise.com/
+Enter Login Password
+    [Arguments]    ${password}
+    Input Text    ${txt_loginPassword}    ${password}
 
-*** Test Cases ***
-LoginTest
-    Open my Browser    ${SiteUrl}    ${Browser}
-    Click SignupLogin Link
-    Enter Login Email       tejasvi9911@yopmail.com
-    Enter Login Password    Test@1234
-    Click Login Button
-    Verify Login Successful
-    Click Logout
-    Close my Browser
+Click Login Button
+    Click Button    ${btn_login}
+    Sleep    3s
 
-InvalidLoginTest
-    Open my Browser    ${SiteUrl}    ${Browser}
-    Click SignupLogin Link
-    Enter Login Email       galat@yopmail.com
-    Enter Login Password    GalatPassword
-    Click Login Button
-    Verify Login Failed
-    Close my Browser
+Verify Login Successful
+    Page Should Contain Element    ${lbl_loggedInAs}
+
+Verify Login Failed
+    Page Should Contain Element    ${lbl_loginError}
