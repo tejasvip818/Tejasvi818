@@ -1,0 +1,345 @@
+# Python + Playwright — All Assignment Questions
+
+**Batch:** Python_Playwright_4thJuly26_WeekendBatch
+**Trainer:** Prabhakar Gudi
+**Collected from:** MS Teams chat, 2 July 2026 → 9 August 2026
+
+---
+
+## 1. Conditional Statements — 11 July 2026
+
+1. Write a program to verify the given number is positive or negative
+2. Write a program to verify largest among two given numbers
+3. Write a program to verify largest among three given numbers
+4. Write a program to verify the given number divisible by 9 or not
+5. Write a program to verify the color code of Traffic Light
+6. Write a program to find number of digits in a given number
+7. Write a program to find percentage of tax calculation based on Range of Salary?
+8. Write a program for the given weekday number input find the weekday name?
+9. Write a program for the given month number input find the month name?
+
+---
+
+## 2. Looping Statements — 11 July 2026
+
+1. Write a program to display Even numbers 60 to 40
+2. Write a program to display odd numbers 91 to 71
+3. Write a program to display Square of each numbers in between 1 to 20
+4. Write a program to find sum of numbers in between 1 to 10
+5. Write a program to display count of numbers in between 1 to 100 which are divisible by 8
+6. Write a program to display sum of numbers in between 1 to 100 which are divisible by 7?
+7. Write a program to display first 10 Fib numbers → `0 1 1 2 3 5 8 13 21 34`
+8. Write a program to verify the given number is Prime or not
+9. Write a program to find sum of Even numbers & odd numbers in between 1 to 500?
+10. Write a program to find the factorial of a given number?
+
+---
+
+## 3. Pattern Programs (for loop & while loop) — 12 July 2026
+
+**1)**
+```
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+```
+
+**2)**
+```
+A
+B C
+D E F
+G H I J
+K L M N
+O P Q R S
+```
+
+**3)**
+```
+5 5 5 5 5
+4 4 4 4
+3 3 3
+2 2
+1
+```
+
+**4)**
+```
+1 1 1 1 1
+1 1 1 1
+1 1 1
+1 1
+1
+```
+
+**5)**
+```
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+```
+
+**6)**
+```
+1
+3 5
+7 9 11
+13 15 17 19
+21 23 25 27 29
+```
+
+**7)**
+```
+* * * * *
+* * * *
+* * *
+* *
+*
+```
+
+**8)**
+```
+A
+B B
+C C C
+D D D D
+E E E E E
+```
+
+---
+
+## 4. Loops — Solved Set — 12 July 2026
+
+1. Write a program to verify the given number is Prime or Not?
+2. Write a program to display First 10 Fib numbers (`0 1 1 2 3 5 8 13 21 34`)
+3. Write a program to find sum of Even & odd numbers in between 1 to 500?
+
+> Solutions for these three were shared in class.
+
+---
+
+## 5. Strings — 12 July 2026
+
+1. The given string is `Bangalore and Mysore` — write a program to display `Mysore and Bangalore`
+2. Without using `reverse` function, reverse the given String
+3. Without using `len` function, find out number of characters in a given string
+4. The given string is `PROGRAM`, write a program to display below pattern
+
+   **a)**
+   ```
+   P
+   P R
+   P R O
+   P R O G
+   P R O G R
+   P R O G R A
+   P R O G R A M
+   ```
+
+   **b)**
+   ```
+   P R O G R A M
+   P R O G R A
+   P R O G R
+   P R O G
+   P R O
+   P R
+   P
+   ```
+
+5. The given string is `"SUNDAYMONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAY"`
+   - a) Remove each occurrence of `DAY`
+   - b) Insert `,` after each occurrence of `DAY`
+6. Verify the given string is Palindrome or not
+
+---
+
+## 6. Lists — 18 July 2026
+
+**Warm-up:**
+
+1. Programmatically add even numbers 30 to 50 into a list and read Elements in reverse order
+
+**Main set:**
+
+1. Programmatically add first 10 fib numbers into a list and read Elements?
+2. There is a Tuple — read Elements from tuple and add into a list?
+3. There is a list — write a program to read First half of the Elements?
+4. There is a list — write a program to read Second half of the Elements?
+5. There are two lists: list1 has 5 Elements, list2 has 4 Elements. Without using `extend` in-built function, add all elements of list1 & list2 into newlist?
+6. There is a list with integer elements — find sum of All Elements?
+
+---
+
+## 7. Set / Tuple / Dictionary — 18 July 2026
+
+1. There is a set — programmatically add all Elements of set into list and read the elements from list?
+2. There is a tuple — programmatically add all Elements of tuple into list and read the elements from list?
+3. There is a dictionary — programmatically add all keys into a list and all values into a list?
+4. There is a tuple with unique elements — programmatically add all Elements of tuple into set and read the elements from set?
+
+---
+
+## 8. Functions — 19 July 2026
+
+1. Write a function to find sum of Prime numbers in between 1 to 100
+2. Write a function to find count of prime numbers in between 1 to 100?
+3. Write a function to display prime numbers in between 100 to 200?
+4. Write a function to display count of numbers in between 1 to 100 which are divisible by 7?
+5. Write a function to display First 10 Fib numbers?
+6. Write a function for given dictionary — read key and values?
+7. Write a function for given set — assign each element into a list and read elements from list?
+8. Write a function for given integer tuple — find sum of first half of Elements & find sum of Second half of Elements?
+9. Write a function to display all Mathematical Tables from 1 to 20?
+
+**Extra:**
+
+- Write a function to return whether the given number is Prime or Not? *(solution shared in class)*
+
+---
+
+## 9. Functions That Return a Value — 19 July 2026
+
+1. Write a function to return sum of first 10 numbers?
+2. Write a function to return missing numbers from a given integer list of numbers?
+3. Write a function to return a list?
+4. Write a function to return a tuple?
+5. Write a function to return a set?
+6. Write a function to return a dictionary?
+7. Write a function to return area of a circle?
+8. Write a function to return sorted set? (a set has some elements — sort the elements and return it)
+9. Write a function to return all values from a given dictionary?
+
+---
+
+## 10. OOPs — Class Variables & Instance Variables — 25 July 2026
+
+1. Create Class `Flower` and Execute it
+2. Create class `Country` and execute it
+3. Create a class `Insurance` and Execute it
+4. Create a class `Product` and Execute it
+
+**Apply Parametrization of Constructor:**
+
+1. Create a class `TwoWheelers`
+2. Create class `University`
+3. Create a class `EngineeringCollege`
+
+---
+
+## 11. Nested Classes — 26 July 2026
+
+1. Write a class for `Employee` and `Insurance` as Outer and Inner class, and pass Inner class object as parameter to Outer class Constructor?
+2. Write a class for `Product` and `Order` as Outer and Inner class, and pass Inner class object as parameter to Outer class Constructor?
+3. Write a class for `Student` and `Library` as Outer and Inner class, and pass Inner class object as parameter to Outer class Constructor?
+
+---
+
+## 12. Inheritance — 26 July 2026
+
+1. Write a program to describe Multilevel inheritance
+2. Write a program to describe Hierarchical inheritance
+3. Write a program to describe Hybrid Inheritance
+4. Write a program to describe Multiple inheritance
+5. In Multilevel inheritance, super class contains parametrized constructor?
+6. In Hybrid inheritance, super class contains parametrized constructor?
+7. In Multilevel inheritance each class contains same method name with signature — execute all methods based on sub class object?
+8. In Multilevel inheritance each class contains same variable name — execute all variables based on sub class object?
+9. In Hybrid Inheritance each class contains same variable name and method name with signature — execute all based on sub class object?
+
+---
+
+## 13. HTML Practice Cases — 1 & 2 August 2026
+
+1. Case 3: Create a HTML Web Page without using any html tags
+2. Case 4: Create a HTML Web Page with Links
+3. Case 5: Create a HTML Web Page with Images
+4. Case 6: Create a HTML Web Page with formatting options
+5. Case 7: Create a Web Page with Unordered List Items
+6. Case 8: Create a Web Page with Ordered List Items
+7. Case 9: Nested List Items
+8. Case 10: Create a Web Page with Table
+9. Case 11: Create a Web Page with Table Attributes
+10. Case 12: Create a Web Page with typical Enquiry form containing Username, Description and Gender
+11. Case 13: Create a Web Page with typical Enquiry form containing Username, Description, Gender, Hobbies, Drop Down City Name
+12. Case 14: Create a Web Page with File Upload
+13. Case 15: Create a Web Page with HTML5 Elements
+14. Case 16: Create a Web Page with Calendar Elements
+15. Case 17: Create a Web Page with Form Elements and Form Attributes
+16. Case 18: Create a Web Page with Frames
+17. Case 19: Create a Web Page that supports mouse Movements
+18. Case 20: Create a Web Page with Alerts, Confirm and Prompts
+
+---
+
+## 14. Playwright UI Automation Scenarios — 8 August 2026
+
+**S G Testing Application Scenarios:**
+
+1. Navigate URL → Login → CreateEmployee → DeleteEmployee → Logout
+2. Navigate URL → Login → CreateEmployee → ModifyEmployee → DeleteEmployee → Logout
+3. Navigate URL → Login → CreateCustomer → DeleteCustomer → Logout
+4. Navigate URL → Login → CreateCustomer → ModifyCustomer → DeleteCustomer → Logout
+5. Navigate URL → Login → CreateCustomer → CreateProject → DeleteProject → DeleteCustomer → Logout
+6. Navigate URL → Login → CreateCustomer → CreateProject → ModifyProject → DeleteProject → DeleteCustomer → Logout
+7. Navigate URL → Login → CreateCustomer → CreateProject → CreateTask → DeleteTask → DeleteProject → DeleteCustomer → Logout
+8. Navigate URL → Login → CreateCustomer → CreateProject → CreateTask → ModifyTask → DeleteTask → DeleteProject → DeleteCustomer → Logout
+9. Navigate URL → Login → ImportEmployee → DeleteEmployee → Logout
+
+---
+
+## 15. RESTful API Scenarios — 11 July 2026
+
+1. Authenticate → Create Employee → Display Employee → Delete Employee
+2. Authenticate → Create Employee → Display Employee → Modify Employee [PUT] → Display Employee → Delete Employee
+3. Authenticate → Create Employee → Display Employee → Modify Employee [PATCH] → Display Employee → Delete Employee
+4. Authenticate → Create Employee → Filter By First Name → Delete Employee
+5. Authenticate → Create Employee → Filter By Jobname and Department Name → Delete Employee
+6. Authenticate → Create Employee → Filter By First Name or Jobname or Department Name → Delete Employee
+7. Authenticate → Create Employee → Contains Email → Delete Employee
+8. Authenticate → Upload Single Employee → Display Employee → Delete Employee
+9. Authenticate → Upload Multiple Employees → Display Employees → Delete Each Employee
+10. Authenticate → Create Customer → Display Customer → Delete Customer
+11. Authenticate → Create Customer → Display Customer → Modify Customer [PUT] → Display Customer → Delete Customer
+12. Authenticate → Create Customer → Display Customer → Modify Customer [PATCH] → Display Customer → Delete Customer
+13. Authenticate → Create More than One Customers → Filter By Location and Sorting → Delete Each Customer
+14. Authenticate → Create More than One Customers → Filter By Containing email and Sorting → Delete Each Customer
+15. Authenticate → Create More than One Customers → Filter By Customer Name and Sorting → Delete Each Customer
+16. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Delete Project → Delete Customer
+17. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Delete Project → Delete Customer
+18. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Modify Project [PUT] → Display Project → Delete Project → Delete Customer
+19. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Modify Project [PATCH] → Display Project → Delete Project → Delete Customer
+20. Authenticate → Create Customer → Display Customer → Create Project → Filter By Project Title and Sorting → Delete Project → Delete Customer
+21. Authenticate → Create Customer → Display Customer → Create More than One Projects → Filter By Project Title and Sorting → Delete Each Project → Delete Customer
+22. Authenticate → Create Customer → Display Customer → Create More than One Projects → Filter By Project Domain and Sorting → Delete Each Project → Delete Customer
+23. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Create Task → Display Task → Delete Task
+24. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Create Task → Display Task → Modify Task [PUT] → Display Task → Delete Task
+25. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Create Task → Display Task → Modify Task [PATCH] → Display Task → Delete Task
+26. Authenticate → Create Customer → Display Customer → Create Project → Display Project → Create More than One Tasks → Filter By Task Title and Sorting → Delete Each Task
+
+---
+
+### Summary
+
+| # | Topic | Date | Questions |
+|---|-------|------|-----------|
+| 1 | Conditional Statements | 11 Jul | 9 |
+| 2 | Looping Statements | 11 Jul | 10 |
+| 3 | Pattern Programs | 12 Jul | 8 |
+| 4 | Loops (solved set) | 12 Jul | 3 |
+| 5 | Strings | 12 Jul | 6 |
+| 6 | Lists | 18 Jul | 6 (+1) |
+| 7 | Set / Tuple / Dictionary | 18 Jul | 4 |
+| 8 | Functions | 19 Jul | 9 (+1) |
+| 9 | Functions returning value | 19 Jul | 9 |
+| 10 | Class & Instance Variables | 25 Jul | 4 + 3 |
+| 11 | Nested Classes | 26 Jul | 3 |
+| 12 | Inheritance | 26 Jul | 9 |
+| 13 | HTML Practice Cases | 1–2 Aug | 18 |
+| 14 | Playwright UI Scenarios | 8 Aug | 9 |
+| 15 | RESTful API Scenarios | 11 Jul | 26 |
+| | **Total** | | **~137** |
