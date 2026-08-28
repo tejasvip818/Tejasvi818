@@ -1,76 +1,150 @@
-*** Variables ***
-# ===== HOME PAGE =====
-${link_signupLogin}       xpath://a[normalize-space()='Signup / Login']
-${link_products}          xpath://a[normalize-space()='Products']
-${link_cart}              xpath:(//a[@href='/view_cart'])[1]
+*** Settings ***
+Library     SeleniumLibrary
+Resource    ../pageobject/variable.robot
 
-# ===== NEW USER SIGNUP =====
-${lbl_newUserSignup}      xpath://h2[normalize-space()='New User Signup!']
-${txt_signupName}         xpath://input[@data-qa='signup-name']
-${txt_signupEmail}        xpath://input[@data-qa='signup-email']
-${btn_signup}             xpath://button[normalize-space()='Signup']
 
-# ===== ENTER ACCOUNT INFORMATION =====
-${lbl_accountInfo}        xpath://b[normalize-space()='Enter Account Information']
-${rdo_titleMr}            xpath://input[@id='id_gender1']
-${txt_password}           xpath://input[@id='password']
-${drp_days}               id:days
-${drp_months}             id:months
-${drp_years}              id:years
-${chk_newsletter}         xpath://input[@id='newsletter']
-${chk_specialOffers}      xpath://input[@id='optin']
+*** Keywords ***
+# ---------- BROWSER ----------
+Open my Browser
+    [Arguments]    ${SiteUrl}    ${Browser}
+    Open Browser    ${SiteUrl}    ${Browser}
+    Maximize Browser Window
+    Sleep    2s
 
-# ===== ADDRESS INFORMATION =====
-${txt_firstName}          xpath://input[@id='first_name']
-${txt_lastName}           xpath://input[@id='last_name']
-${txt_company}            xpath://input[@id='company']
-${txt_address1}           xpath://input[@id='address1']
-${txt_address2}           xpath://input[@id='address2']
-${drp_country}            id:country
-${txt_state}              xpath://input[@id='state']
-${txt_city}               xpath://input[@id='city']
-${txt_postCode}           xpath://input[@id='zipcode']
-${txt_mobileNumber}       xpath://input[@id='mobile_number']
-${btn_createAccount}      xpath://button[normalize-space()='Create Account']
+Close my Browser
+    Close Browser
 
-# ===== ACCOUNT CREATED =====
-${lbl_accountCreated}     xpath://b[normalize-space()='Account Created!']
-${btn_continue}           xpath://a[@data-qa='continue-button']
-${lbl_loggedInAs}         xpath://a[contains(text(),'Logged in as')]
+# ---------- REGISTRATION ----------
+Click SignupLogin Link
+    Click Element    ${link_signupLogin}
+    Sleep    2s
 
-# ===== PRODUCTS / ADD TO CART =====
-${lbl_allProducts}        xpath://h2[normalize-space()='All Products']
-${btn_addProduct1}        xpath:(//a[@data-product-id='1'])[1]
-${btn_addProduct2}        xpath:(//a[@data-product-id='2'])[1]
-${lbl_addedModal}         xpath://h4[normalize-space()='Added!']
-${btn_continueShopping}   xpath://button[normalize-space()='Continue Shopping']
-${link_viewCart}          xpath://u[normalize-space()='View Cart']
+Enter Signup Name
+    [Arguments]    ${name}
+    Input Text    ${txt_signupName}    ${name}
 
-# ===== CART PAGE =====
-${tbl_cartInfo}           xpath://table[@id='cart_info_table']
-${link_proceedCheckout}   xpath://a[normalize-space()='Proceed To Checkout']
+Enter Signup Email
+    [Arguments]    ${email}
+    Input Text    ${txt_signupEmail}    ${email}
 
-# ===== CHECKOUT PAGE =====
-${lbl_addressDetails}     xpath://h2[normalize-space()='Address Details']
-${lbl_reviewOrder}        xpath://h2[normalize-space()='Review Your Order']
-${txt_orderComment}       xpath://textarea[@name='message']
-${btn_placeOrder}         xpath://a[normalize-space()='Place Order']
+Click Signup Button
+    Click Button    ${btn_signup}
+    Sleep    3s
 
-# ===== PAYMENT PAGE =====
-${txt_nameOnCard}         xpath://input[@name='name_on_card']
-${txt_cardNumber}         xpath://input[@name='card_number']
-${txt_cvc}                xpath://input[@name='cvc']
-${txt_expiryMonth}        xpath://input[@name='expiry_month']
-${txt_expiryYear}         xpath://input[@name='expiry_year']
-${btn_payConfirm}         xpath://button[@data-qa='pay-button']
+Select Title
+    Click Element    ${rdo_titleMr}
 
-# ===== ORDER CONFIRMATION =====
-${lbl_orderPlaced}        xpath://b[normalize-space()='Order Placed!']
-${lbl_orderConfirmed}     xpath://p[contains(text(),'Congratulations')]
-${btn_downloadInvoice}    xpath://a[normalize-space()='Download Invoice']
-${btn_continueOrder}      xpath://a[@data-qa='continue-button']
+Enter Password
+    [Arguments]    ${password}
+    Input Text    ${txt_password}    ${password}
 
-# ===== DELETE ACCOUNT / LOGOUT =====
-${link_deleteAccount}     xpath://a[normalize-space()='Delete Account']
-${lbl_accountDeleted}     xpath://b[normalize-space()='Account Deleted!']
-${link_logout}            xpath://a[normalize-space()='Logout']
+Select DateOfBirth
+    [Arguments]    ${day}    ${month}    ${year}
+    Select From List By Label    ${drp_days}      ${day}
+    Select From List By Label    ${drp_months}    ${month}
+    Select From List By Label    ${drp_years}     ${year}
+
+Select Newsletter And Offers
+    Select Checkbox    ${chk_newsletter}
+    Select Checkbox    ${chk_specialOffers}
+
+Enter Address Information
+    Input Text    ${txt_firstName}       Tejasvi
+    Input Text    ${txt_lastName}        Kumar
+    Input Text    ${txt_company}         Capgemini
+    Input Text    ${txt_address1}        MG Road
+    Input Text    ${txt_address2}        Near Metro
+    Select From List By Label    ${drp_country}    India
+    Input Text    ${txt_state}           Karnataka
+    Input Text    ${txt_city}            Bengaluru
+    Input Text    ${txt_postCode}        560001
+    Input Text    ${txt_mobileNumber}    9876543210
+
+Click Create Account
+    Click Button    ${btn_createAccount}
+    Sleep    3s
+
+Verify Account Created
+    Page Should Contain Element    ${lbl_accountCreated}
+    Click Element    ${btn_continue}
+    Sleep    2s
+
+Verify User Is LoggedIn
+    Page Should Contain Element    ${lbl_loggedInAs}
+
+# ---------- ADD TO CART ----------
+Click Products Link
+    Click Element    ${link_products}
+    Sleep    3s
+    Page Should Contain Element    ${lbl_allProducts}
+
+Add First Product To Cart
+    Click Element    ${btn_addProduct1}
+    Sleep    2s
+    Page Should Contain Element    ${lbl_addedModal}
+
+Click Continue Shopping
+    Click Element    ${btn_continueShopping}
+    Sleep    2s
+
+Add Second Product To Cart
+    Click Element    ${btn_addProduct2}
+    Sleep    2s
+    Page Should Contain Element    ${lbl_addedModal}
+
+Click View Cart
+    Click Element    ${link_viewCart}
+    Sleep    3s
+
+Verify Cart Page
+    Page Should Contain Element    ${tbl_cartInfo}
+
+# ---------- CHECKOUT ----------
+Click Proceed To Checkout
+    Click Element    ${link_proceedCheckout}
+    Sleep    3s
+
+Verify Address And Order
+    Page Should Contain Element    ${lbl_addressDetails}
+    Page Should Contain Element    ${lbl_reviewOrder}
+
+Enter Order Comment
+    [Arguments]    ${comment}
+    Input Text    ${txt_orderComment}    ${comment}
+
+Click Place Order
+    Click Element    ${btn_placeOrder}
+    Sleep    3s
+
+# ---------- PAYMENT ----------
+Enter Payment Details
+    [Arguments]    ${nameOnCard}    ${cardNo}    ${cvc}    ${month}    ${year}
+    Input Text    ${txt_nameOnCard}     ${nameOnCard}
+    Input Text    ${txt_cardNumber}     ${cardNo}
+    Input Text    ${txt_cvc}            ${cvc}
+    Input Text    ${txt_expiryMonth}    ${month}
+    Input Text    ${txt_expiryYear}     ${year}
+
+Click Pay And Confirm Order
+    Click Element    ${btn_payConfirm}
+    Sleep    5s
+
+Verify Order Confirmed
+    Page Should Contain Element    ${lbl_orderPlaced}
+    Page Should Contain Element    ${lbl_orderConfirmed}
+
+Click Continue After Order
+    Click Element    ${btn_continueOrder}
+    Sleep    2s
+
+# ---------- CLEANUP ----------
+Delete Account
+    Click Element    ${link_deleteAccount}
+    Sleep    3s
+    Page Should Contain Element    ${lbl_accountDeleted}
+    Click Element    ${btn_continue}
+    Sleep    2s
+
+Click Logout
+    Click Element    ${link_logout}
+    Sleep    2s
