@@ -1,1 +1,1 @@
-Hi Rashmi, I received the redeployment outcome email today. However, I have recently been selected for the KCC - Aurora project as a Test Automation Engineer, and the KT has already started. Could you please check and advise whether any action is required from my side?
+
