@@ -1,1 +1,1 @@
-robot --dryrun tests/SAP_FIORI/501681_ES4_OTC_FnC_580_Manually_update_charges.robot
+Get-ChildItem C:\Users\R75615\AppData\Local\Programs\Python -Directory
