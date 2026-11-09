@@ -1,1 +1,1 @@
-I completed all mandatory organizational trainings on time. I also focused on delivery quality by following best practices, keeping documentation clear and closing defects on time, ensuring smooth and issue-free deliveries. Next, I plan to apply AI-driven approaches to automation and keep building my skills in Power BI and data engineering.
+Hi Rashmi, I have completed my self-assessment for the Year-End Review 2026. Please review it, and I would be happy to discuss any feedback. Thank you!
