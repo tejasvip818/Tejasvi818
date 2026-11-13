@@ -1,1 +1,1 @@
-Hi Rashmi, I'm sharing the documents with you here as Outlook is currently not working. Could you please upload the documents in the meantime? I'll share them with you via email as soon as Outlook is working again. Thank you for your understanding.
+I’m currently working on MDG test cases. The test cases are executing, but the email is not being triggered. We’re checking this issue.
