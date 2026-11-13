@@ -1,1 +1,1 @@
-Hi Rashmi, I'm sharing the documents with you here because Outlook is not working. Could you please upload the documents in the meantime? Once Outlook is working again, I'll send them to you via email.
+Hi Rashmi, I'm sharing the documents with you here as Outlook is currently not working. Could you please upload the documents in the meantime? I'll share them with you via email as soon as Outlook is working again. Thank you for your understanding.
