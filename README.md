@@ -1,4 +1,4 @@
-SeleniumLibrary.Wait Until Element Is Visible    //button[contains(@id,'CHART-btnChartType')]    timeout=30s
-    SeleniumLibrary.Click Element                    //button[contains(@id,'CHART-btnChartType')]
+SeleniumLibrary.Wait Until Element Is Visible    //li[contains(@class,'sapMSLI')][.//div[normalize-space(text())='Pie Chart']]    timeout=20s
+    SeleniumLibrary.Click Element                    //li[contains(@class,'sapMSLI')][.//div[normalize-space(text())='Pie Chart']]
+
     Sleep    3s
-    SeleniumLibrary.Take Screenshot
