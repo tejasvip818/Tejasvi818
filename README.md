@@ -1,4 +1,5 @@
-SeleniumLibrary.Wait Until Element Is Visible    //li[contains(@class,'sapMSLI')][.//div[normalize-space(text())='Pie Chart']]    timeout=20s
-    SeleniumLibrary.Click Element                    //li[contains(@class,'sapMSLI')][.//div[normalize-space(text())='Pie Chart']]
 
-    Sleep    3s
+    SeleniumLibrary.Wait Until Element Is Visible    //button[@title='Export to Spreadsheet']    timeout=30s
+    SeleniumLibrary.Click Element                    //button[@title='Export to Spreadsheet']
+    Sleep    10s
+    SeleniumLibrary.Take Screenshot
